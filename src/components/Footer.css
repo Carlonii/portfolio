@@ -1,0 +1,103 @@
+.footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-subtle);
+    padding: var(--space-16) 0 0;
+    margin-top: var(--space-10);
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-10);
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--space-10);
+}
+
+.footer-brand .footer-logo {
+    font-family: var(--font-mono);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    display: inline-flex;
+    gap: 2px;
+    margin-bottom: var(--space-3);
+}
+
+.footer-brand .logo-bracket {
+    color: var(--accent-primary);
+}
+
+.footer-brand .logo-text {
+    color: var(--text-primary);
+}
+
+.footer-tagline {
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    line-height: 1.6;
+    max-width: 300px;
+}
+
+.footer-links-group h4 {
+    color: var(--text-primary);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: var(--space-4);
+}
+
+.footer-links-group a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+    padding: var(--space-1) 0;
+    transition: all var(--transition-fast);
+    text-decoration: none;
+    border-radius: var(--radius-sm);
+}
+
+.footer-links-group a:hover {
+    color: var(--accent-primary);
+    transform: translateX(4px);
+}
+
+.footer-links-group a:focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--accent-primary);
+    padding-left: var(--space-2);
+    color: var(--accent-primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--border-subtle);
+    padding: 24px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+
+.heart-icon {
+    color: #ef4444;
+    animation: pulse-glow 2s ease-in-out infinite;
+    display: inline;
+}
+
+@media (max-width: 768px) {
+    .footer-top {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}

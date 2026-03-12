@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Filipe Carloni | Dashboard with Nav CTA</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#00d4aa",
+                        "secondary": "#8b5cf6",
+                        "background-light": "#f5f8f8",
+                        "background-dark": "#0a0a0f",
+                        "surface": "rgba(255, 255, 255, 0.03)",
+                        "surface-border": "rgba(255, 255, 255, 0.1)",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "1.5rem",
+                        "xl": "2rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style type="text/tailwindcss">
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .neon-border {
+            border: 1px solid transparent;
+            background: linear-gradient(#0a0a0f, #0a0a0f) padding-box,
+                        linear-gradient(to right, #00d4aa, #8b5cf6) border-box;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #00d4aa, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .bg-grid {
+            background-size: 40px 40px;
+            background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+        }@keyframes orbit {
+            from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+        }
+        @keyframes orbit-reverse {
+            from { transform: rotate(360deg) translateX(160px) rotate(-360deg); }
+            to { transform: rotate(0deg) translateX(160px) rotate(0deg); }
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .orbiting-item {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -24px;
+            margin-left: -24px;
+        }
+        .orbit-1 { animation: orbit 20s linear infinite; }
+        .orbit-2 { animation: orbit 25s linear infinite -5s; }
+        .orbit-3 { animation: orbit 30s linear infinite -10s; }
+        .orbit-inner-1 { animation: orbit-reverse 18s linear infinite; }
+        .orbit-inner-2 { animation: orbit-reverse 22s linear infinite -7s; }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 font-display min-h-screen flex flex-col antialiased bg-grid relative overflow-x-hidden">
+    <header class="sticky top-0 z-50 glass-card border-b border-surface-border px-6 py-4 lg:px-12 backdrop-blur-md">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-tr from-primary to-secondary text-white font-bold text-xl">
+                    FC
+                </div>
+                <span class="font-bold text-xl tracking-tight hidden sm:block">Filipe Carloni</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Backend</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">AI</a>
+                <a class="text-sm font-medium hover:text-primary transition-colors" href="#">Blog</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <button
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-surface border border-surface-border hover:border-primary transition-colors">
+                    <span class="text-sm">🇧🇷</span>
+                </button>
+                <button
+                    class="flex items-center justify-center w-10 h-10 rounded-full bg-surface border border-surface-border hover:border-primary transition-colors">
+                    <span class="material-symbols-outlined text-sm">dark_mode</span>
+                </button>
+                <button
+                    class="hidden sm:flex px-6 py-2.5 rounded-full bg-gradient-to-r from-primary via-primary/80 to-primary text-background-dark font-bold text-sm hover:brightness-110 transition-all shadow-[0_0_20px_rgba(0,212,170,0.4)] items-center">
+                    Vamos conversar
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-grow w-full max-w-7xl mx-auto px-6 lg:px-12 py-12 flex flex-col gap-24 relative z-10">
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="flex flex-col gap-6 items-start">
+                <div
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 text-primary text-sm font-medium">
+                    <span class="relative flex h-3 w-3">
+                        <span
+                            class="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-3 w-3 bg-primary"></span>
+                    </span>
+                    Available for work
+                </div>
+                <h1 class="text-5xl lg:text-7xl font-bold leading-tight tracking-tight">
+                    Olá, eu sou <br />
+                    <span class="text-gradient">Filipe Carloni</span>
+                </h1>
+                <p class="text-lg text-slate-400 max-w-lg leading-relaxed">
+                    Full Stack Developer specializing in high-performance backends, AI integrations, and sleek modern
+                    interfaces.
+                </p>
+                <div class="flex flex-wrap gap-4 mt-4">
+                    <button
+                        class="px-6 py-3 rounded-full bg-primary text-background-dark font-bold hover:bg-primary/90 transition-colors shadow-[0_0_20px_rgba(0,212,170,0.4)]">
+                        Vamos Conversar
+                    </button>
+                    <button
+                        class="px-6 py-3 rounded-full border border-surface-border bg-surface hover:bg-surface-border transition-colors font-medium">
+                        Ver Projetos
+                    </button>
+                    <button
+                        class="px-6 py-3 rounded-full border border-surface-border bg-surface hover:bg-surface-border transition-colors font-medium flex items-center gap-2">
+                        <span class="material-symbols-outlined text-sm">download</span>
+                        Baixar CV
+                    </button>
+                </div>
+            </div>
+            <div
+                class="relative w-full aspect-square max-w-[500px] mx-auto lg:ml-auto rounded-3xl overflow-hidden glass-card p-12 flex items-center justify-center">
+                <div class="absolute inset-0 bg-gradient-to-tr from-primary/5 to-secondary/5 opacity-50"></div>
+                <div
+                    class="relative z-10 w-24 h-24 rounded-2xl bg-gradient-to-tr from-primary to-secondary flex items-center justify-center text-white font-bold text-4xl shadow-[0_0_50px_rgba(0,212,170,0.3)] animate-[float_4s_ease-in-out_infinite]">
+                    FC
+                    <div class="absolute -inset-4 bg-primary/20 rounded-3xl blur-2xl -z-10"></div>
+                </div>
+                <div class="absolute inset-0 pointer-events-none">
+                    <div class="orbiting-item orbit-1">
+                        <div
+                            class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-primary shadow-[0_0_20px_rgba(0,212,170,0.2)]">
+                            <span class="material-symbols-outlined">coffee</span>
+                        </div>
+                    </div>
+                    <div class="orbiting-item orbit-2">
+                        <div
+                            class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-secondary shadow-[0_0_20px_rgba(139,92,246,0.2)]">
+                            <span class="material-symbols-outlined">javascript</span>
+                        </div>
+                    </div>
+                    <div class="orbiting-item orbit-3">
+                        <div
+                            class="w-12 h-12 rounded-xl glass-card flex items-center justify-center text-primary shadow-[0_0_20px_rgba(0,212,170,0.2)]">
+                            <span class="material-symbols-outlined">api</span>
+                        </div>
+                    </div>
+                    <div class="orbiting-item orbit-inner-1">
+                        <div class="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-white/80">
+                            <span class="material-symbols-outlined text-sm">psychology</span>
+                        </div>
+                    </div>
+                    <div class="orbiting-item orbit-inner-2">
+                        <div class="w-10 h-10 rounded-lg glass-card flex items-center justify-center text-white/80">
+                            <span class="material-symbols-outlined text-sm">database</span>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute w-[240px] h-[240px] border border-white/5 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                </div>
+                <div
+                    class="absolute w-[320px] h-[320px] border border-white/5 rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                </div>
+            </div>
+        </section>
+        <section class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-xl flex flex-col gap-2 hover:border-primary/50 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">work</span>
+                <p class="text-3xl font-bold text-slate-100">3+</p>
+                <p class="text-sm text-slate-400 font-medium">Anos de Experiência</p>
+            </div>
+            <div
+                class="glass-card p-6 rounded-xl flex flex-col gap-2 hover:border-secondary/50 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-secondary text-3xl mb-2 group-hover:scale-110 transition-transform">speed</span>
+                <p class="text-3xl font-bold text-slate-100">12%</p>
+                <p class="text-sm text-slate-400 font-medium">Melhoria de Performance</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl flex flex-col gap-2 hover:border-primary/50 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-primary text-3xl mb-2 group-hover:scale-110 transition-transform">rocket_launch</span>
+                <p class="text-3xl font-bold text-slate-100">50+</p>
+                <p class="text-sm text-slate-400 font-medium">Projetos Entregues</p>
+            </div>
+            <div
+                class="glass-card p-6 rounded-xl flex flex-col gap-2 hover:border-secondary/50 transition-colors group">
+                <span
+                    class="material-symbols-outlined text-secondary text-3xl mb-2 group-hover:scale-110 transition-transform">groups</span>
+                <p class="text-3xl font-bold text-slate-100">20+</p>
+                <p class="text-sm text-slate-400 font-medium">Clientes Satisfeitos</p>
+            </div>
+        </section>
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+            <div class="col-span-1 lg:col-span-7 flex flex-col gap-8">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Trajetória Profissional</h2>
+                    <p class="text-slate-400">Minha evolução como desenvolvedor ao longo dos anos.</p>
+                </div>
+                <div class="relative pl-8 border-l-2 border-surface-border flex flex-col gap-10">
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-primary border-4 border-background-dark shadow-[0_0_10px_#00d4aa]">
+                        </div>
+                        <div class="glass-card p-6 rounded-xl border-l-4 border-l-primary">
+                            <div
+                                class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-100">Engenheiro de Software</h3>
+                                    <p class="text-primary font-medium">Governo Federal via Youx Group</p>
+                                </div>
+                                <span
+                                    class="px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-medium border border-primary/20">Presente</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Desenvolvimento e manutenção de sistemas críticos em larga escala. Otimização de
+                                performance de banco de dados e implementação de arquiteturas resilientes.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-surface rounded text-xs text-slate-300">Java</span>
+                                <span class="px-2 py-1 bg-surface rounded text-xs text-slate-300">Spring Boot</span>
+                                <span class="px-2 py-1 bg-surface rounded text-xs text-slate-300">PostgreSQL</span>
+                                <span class="px-2 py-1 bg-surface rounded text-xs text-slate-300">Docker</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div
+                            class="absolute -left-[41px] top-1 w-5 h-5 rounded-full bg-surface-border border-4 border-background-dark">
+                        </div>
+                        <div class="glass-card p-6 rounded-xl">
+                            <div
+                                class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-4 gap-2">
+                                <div>
+                                    <h3 class="text-xl font-bold text-slate-100">Desenvolvedor Full Stack</h3>
+                                    <p class="text-slate-300 font-medium">Trinove</p>
+                                </div>
+                                <span class="text-slate-500 text-sm">2021 - 2023</span>
+                            </div>
+                            <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                                Criação de dashboards interativos e APIs RESTful para gestão de dados empresariais.
+                                Liderança técnica em projetos de modernização de legado.
+                            </p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-2 py-1 bg-surface rounded text-xs text-slate-300">Node.js</span>
+                                <span class="px-2 py-1 bg-surface rounded text-xs text-slate-300">React</span>
+                                <span class="px-2 py-1 bg-surface rounded text-xs text-slate-300">AWS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-1 lg:col-span-5 flex flex-col gap-8">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Formação</h2>
+                    <p class="text-slate-400">Base acadêmica e especializações.</p>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="glass-card p-5 rounded-xl border-t-2 border-t-secondary flex items-start gap-4">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-secondary/10 flex items-center justify-center text-secondary shrink-0">
+                            <span class="material-symbols-outlined">school</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100">MBA em Engenharia de Software</h3>
+                            <p class="text-secondary text-sm mb-1">USP ESALQ</p>
+                            <p class="text-slate-500 text-xs">Concluído em 2023</p>
+                        </div>
+                    </div>
+                    <div class="glass-card p-5 rounded-xl flex items-start gap-4 opacity-80">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-surface flex items-center justify-center text-slate-400 shrink-0">
+                            <span class="material-symbols-outlined">computer</span>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-slate-100">Bacharelado em Ciência da Computação</h3>
+                            <p class="text-slate-400 text-sm mb-1">Universidade Federal</p>
+                            <p class="text-slate-500 text-xs">2015 - 2019</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-bold mb-4">Idiomas</h3>
+                    <div class="flex gap-4">
+                        <div class="flex items-center gap-3 glass-card px-4 py-3 rounded-lg flex-1">
+                            <span class="text-2xl">🇧🇷</span>
+                            <div>
+                                <p class="text-sm font-bold text-slate-100">Português</p>
+                                <p class="text-xs text-slate-500">Nativo</p>
+                            </div>
+                        </div>
+                        <div
+                            class="flex items-center gap-3 glass-card px-4 py-3 rounded-lg flex-1 border border-primary/20">
+                            <span class="text-2xl">🇺🇸</span>
+                            <div>
+                                <p class="text-sm font-bold text-slate-100">Inglês</p>
+                                <p class="text-xs text-primary">Fluente</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="flex flex-col gap-8">
+            <div>
+                <h2 class="text-3xl font-bold mb-2 text-center">Tech Stack</h2>
+                <p class="text-slate-400 text-center max-w-2xl mx-auto">Ferramentas e tecnologias que utilizo para
+                    construir soluções robustas e escaláveis.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[200px]">
+                <div
+                    class="glass-card rounded-xl p-6 flex flex-col border border-surface-border hover:border-primary/50 transition-colors lg:col-span-2">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary">code_blocks</span>
+                        <h3 class="text-xl font-bold">Linguagens</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-auto">
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-surface border border-surface-border text-sm hover:text-primary hover:border-primary transition-colors cursor-default">JavaScript
+                            / TypeScript</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-surface border border-surface-border text-sm hover:text-primary hover:border-primary transition-colors cursor-default">Python</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-surface border border-surface-border text-sm hover:text-primary hover:border-primary transition-colors cursor-default">Java</span>
+                        <span
+                            class="px-3 py-1.5 rounded-lg bg-surface border border-surface-border text-sm hover:text-primary hover:border-primary transition-colors cursor-default">Go</span>
+                    </div>
+                </div>
+                <div
+                    class="glass-card rounded-xl p-6 flex flex-col border border-surface-border hover:border-secondary/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-secondary">database</span>
+                        <h3 class="text-xl font-bold">Databases</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1.5 rounded-lg bg-surface text-sm">PostgreSQL</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-surface text-sm">MongoDB</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-surface text-sm">Redis</span>
+                    </div>
+                </div>
+                <div
+                    class="glass-card rounded-xl p-6 flex flex-col border border-surface-border hover:border-primary/50 transition-colors">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-primary">terminal</span>
+                        <h3 class="text-xl font-bold">DevOps</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-2 mt-auto">
+                        <span class="px-3 py-1.5 rounded-lg bg-surface text-sm">Docker</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-surface text-sm">AWS</span>
+                        <span class="px-3 py-1.5 rounded-lg bg-surface text-sm">CI/CD</span>
+                    </div>
+                </div>
+                <div
+                    class="glass-card rounded-xl p-6 flex flex-col border border-surface-border hover:border-secondary/50 transition-colors lg:col-span-4 row-span-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="material-symbols-outlined text-secondary">layers</span>
+                        <h3 class="text-xl font-bold">Frameworks &amp; Libraries</h3>
+                    </div>
+                    <div class="flex flex-wrap gap-3 mt-auto items-center justify-center">
+                        <span class="px-4 py-2 rounded-lg bg-surface border border-surface-border text-sm">React /
+                            Next.js</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface border border-surface-border text-sm">Node.js /
+                            Express</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface border border-surface-border text-sm">Spring
+                            Boot</span>
+                        <span class="px-4 py-2 rounded-lg bg-surface border border-surface-border text-sm">Tailwind
+                            CSS</span>
+                        <span
+                            class="px-4 py-2 rounded-lg border border-primary/30 text-primary text-sm shadow-[0_0_10px_rgba(0,212,170,0.2)]">LangChain
+                            / AI</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="mt-24 mb-12 relative">
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-primary/5 rounded-3xl -z-10 blur-xl">
+            </div>
+            <div
+                class="glass-card rounded-3xl p-12 text-center border-t border-t-primary/20 flex flex-col items-center gap-8 relative overflow-hidden">
+                <div class="absolute -top-24 -left-24 w-48 h-48 bg-primary/20 rounded-full blur-3xl"></div>
+                <div class="absolute -bottom-24 -right-24 w-48 h-48 bg-secondary/20 rounded-full blur-3xl"></div>
+                <h2 class="text-4xl lg:text-5xl font-bold tracking-tight max-w-2xl relative z-10">
+                    Pronto para transformar sua ideia em <span class="text-gradient">realidade?</span>
+                </h2>
+                <p class="text-slate-400 text-lg max-w-xl relative z-10">
+                    Estou disponível para novos projetos, consultorias e oportunidades de colaboração.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4 relative z-10">
+                    <button
+                        class="px-8 py-4 rounded-full bg-primary text-background-dark font-bold text-lg hover:bg-primary/90 transition-colors shadow-[0_0_30px_rgba(0,212,170,0.3)] flex items-center gap-2">
+                        <span class="material-symbols-outlined">mail</span>
+                        Entrar em Contato
+                    </button>
+                </div>
+                <div class="flex gap-6 mt-8 pt-8 border-t border-surface-border w-full justify-center relative z-10">
+                    <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2" href="#">
+                        <span class="material-symbols-outlined">link</span>
+                        LinkedIn
+                    </a>
+                    <a class="text-slate-400 hover:text-primary transition-colors flex items-center gap-2" href="#">
+                        <span class="material-symbols-outlined">code</span>
+                        GitHub
+                    </a>
+                </div>
+                <p class="text-sm text-slate-600 mt-4 relative z-10">© 2024 Filipe Carloni. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+
+</body>
+
+</html>

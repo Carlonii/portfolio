@@ -1,0 +1,76 @@
+/* ===== AI Projects Page ===== */
+
+/* AI Hero Overrides */
+.ai-hero {
+    background: linear-gradient(180deg, var(--bg-primary), rgba(124, 58, 237, 0.03));
+}
+
+.ai-badge {
+    color: var(--accent-secondary) !important;
+    background: rgba(124, 58, 237, 0.08) !important;
+    border-color: rgba(124, 58, 237, 0.25) !important;
+}
+
+/* AI Particles Effect */
+.ai-particles {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(124, 58, 237, 0.15) 1px, transparent 1px),
+        radial-gradient(circle, rgba(0, 212, 170, 0.1) 1px, transparent 1px);
+    background-size: 50px 50px, 80px 80px;
+    background-position: 0 0, 25px 25px;
+    animation: float 8s ease-in-out infinite;
+    opacity: 0.5;
+}
+
+/* AI terminal prompt variant */
+.ai-terminal {
+    border-color: rgba(124, 58, 237, 0.2) !important;
+}
+
+.terminal-prompt-purple {
+    color: var(--accent-secondary);
+    font-weight: 700;
+}
+
+.terminal-cursor-purple {
+    width: 8px;
+    height: 18px;
+    background: var(--accent-secondary);
+    border-radius: 2px;
+    animation: blink 1s step-end infinite;
+}
+
+/* AI Tech Card Overrides */
+.ai-tech-card:hover {
+    box-shadow: var(--shadow-glow-purple);
+}
+
+.ai-icon {
+    color: var(--accent-secondary) !important;
+}
+
+.ai-tech-card .tech-card-icon {
+    color: var(--accent-secondary);
+}
+
+/* AI Badge overrides in project cards */
+.ai-page .tech-badge {
+    color: #a78bfa;
+    background: rgba(124, 58, 237, 0.08);
+    border-color: rgba(124, 58, 237, 0.15);
+}
+
+.ai-page .project-card:hover {
+    box-shadow: var(--shadow-glow-purple);
+}
+
+.ai-page .project-card-category {
+    color: var(--accent-secondary);
+    background: rgba(124, 58, 237, 0.1);
+    border-color: rgba(124, 58, 237, 0.2);
+}
+
+.ai-page .highlight-dot {
+    background: var(--accent-secondary);
+}
