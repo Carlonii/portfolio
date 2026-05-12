@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {
     ArrowRight, Download, Mail, Phone, Linkedin, Github,
     Code2, Database, Server, Globe, Briefcase, GraduationCap,
-    Zap, TrendingUp, Users, Clock, GitBranch, Cpu, Rocket, Layers
+    Zap, TrendingUp, Users, Clock, GitBranch, Cpu, Rocket, Layers, MessageCircle
 } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import SectionTitle from '../components/SectionTitle';
@@ -165,8 +165,8 @@ export default function Home() {
                                 </p>
 
                                 <div className="hero-actions animate-fade-in-up animate-delay-4">
-                                    <a href="mailto:dipradofilipe@gmail.com" className="btn btn-primary">
-                                        <Mail size={18} /> {t('hero.cta')}
+                                    <a href="https://wa.me/5562999912499?text=Olá%20Filipe,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" className="btn btn-primary">
+                                        <MessageCircle size={18} /> {t('hero.cta')}
                                     </a>
                                     <Link to="/backend" className="btn btn-outline">
                                         {t('hero.viewProjects')} <ArrowRight size={18} />
@@ -177,14 +177,14 @@ export default function Home() {
                                 </div>
 
                                 <div className="hero-social animate-fade-in-up animate-delay-5">
-                                    <a href="https://github.com/filipe-carloni" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
+                                    <a href="https://github.com/Carlonii" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="GitHub">
                                         <Github size={20} />
                                     </a>
-                                    <a href="https://linkedin.com/in/filipe-carloni" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
+                                    <a href="https://www.linkedin.com/in/filipe-carloni-dev/" target="_blank" rel="noopener noreferrer" className="social-link" aria-label="LinkedIn">
                                         <Linkedin size={20} />
                                     </a>
-                                    <a href="tel:+5562999912499" className="social-link" aria-label="Telefone">
-                                        <Phone size={20} />
+                                    <a href="https://wa.me/5562999912499?text=Olá%20Filipe,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" className="social-link" aria-label="WhatsApp">
+                                        <MessageCircle size={20} />
                                     </a>
                                 </div>
                             </div>
@@ -367,15 +367,15 @@ export default function Home() {
                                 <a href="mailto:dipradofilipe@gmail.com" className="btn btn-primary btn-lg">
                                     <Mail size={20} /> dipradofilipe@gmail.com
                                 </a>
-                                <a href="tel:+5562999912499" className="btn btn-outline btn-lg">
-                                    <Phone size={20} /> +55 (62) 99991-2499
+                                <a href="https://wa.me/5562999912499?text=Olá%20Filipe,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" className="btn btn-outline btn-lg">
+                                    <MessageCircle size={20} /> +55 (62) 99991-2499
                                 </a>
                             </div>
                             <div className="cta-social">
-                                <a href="https://linkedin.com/in/filipe-carloni" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                                <a href="https://www.linkedin.com/in/filipe-carloni-dev/" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                                     <Linkedin size={18} /> LinkedIn
                                 </a>
-                                <a href="https://github.com/filipe-carloni" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
+                                <a href="https://github.com/Carlonii" target="_blank" rel="noopener noreferrer" className="btn btn-ghost">
                                     <Github size={18} /> GitHub
                                 </a>
                             </div>

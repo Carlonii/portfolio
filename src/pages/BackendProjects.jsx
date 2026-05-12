@@ -117,7 +117,7 @@ export default function BackendProjects() {
                                         icon: featuredIcons[i],
                                         tech: featuredTech[i],
                                         metrics: featuredMetrics[i],
-                                        github: i === 0 ? 'https://github.com/Carlonii/Auth_Core' : 'https://github.com/filipe-carloni',
+                                        github: i === 0 ? 'https://github.com/Carlonii/Auth_Core' : 'https://github.com/Carlonii',
                                     }}
                                 />
                             ))}

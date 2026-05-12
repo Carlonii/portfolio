@@ -1,4 +1,4 @@
-import { Github, Linkedin, Mail, Phone, Heart } from 'lucide-react';
+import { Github, Linkedin, Mail, Phone, MessageCircle } from 'lucide-react';
 import { useLanguage } from '../i18n/LanguageContext';
 import './Footer.css';
 
@@ -32,13 +32,13 @@ export default function Footer() {
                         <a href="mailto:dipradofilipe@gmail.com" aria-label="Enviar email para Filipe Carloni">
                             <Mail size={14} aria-hidden="true" /> dipradofilipe@gmail.com
                         </a>
-                        <a href="tel:+5562999912499" aria-label="Ligar para o telefone de Filipe Carloni">
-                            <Phone size={14} aria-hidden="true" /> +55 (62) 99991-2499
+                        <a href="https://wa.me/5562999912499?text=Olá%20Filipe,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" aria-label="Enviar mensagem via WhatsApp para Filipe Carloni">
+                            <MessageCircle size={14} aria-hidden="true" /> +55 (62) 99991-2499
                         </a>
-                        <a href="https://linkedin.com/in/filipe-carloni" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no LinkedIn">
+                        <a href="https://www.linkedin.com/in/filipe-carloni-dev/" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no LinkedIn">
                             <Linkedin size={14} aria-hidden="true" /> LinkedIn
                         </a>
-                        <a href="https://github.com/filipe-carloni" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no GitHub">
+                        <a href="https://github.com/Carlonii" target="_blank" rel="noopener noreferrer" aria-label="Visitar perfil no GitHub">
                             <Github size={14} aria-hidden="true" /> GitHub
                         </a>
                     </div>
@@ -46,8 +46,7 @@ export default function Footer() {
 
                 <div className="footer-bottom">
                     <p>
-                        © {new Date().getFullYear()} Filipe Carloni. {t('footer.madeWith')}{' '}
-                        <Heart size={14} className="heart-icon" /> {t('footer.andCode')}
+                        © {new Date().getFullYear()} Filipe Carloni
                     </p>
                 </div>
             </div>

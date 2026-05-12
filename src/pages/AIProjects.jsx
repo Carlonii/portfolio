@@ -117,7 +117,7 @@ export default function AIProjects() {
                                         icon: featuredIcons[i],
                                         tech: featuredTech[i],
                                         metrics: featuredMetrics[i],
-                                        github: 'https://github.com/filipe-carloni',
+                                        github: 'https://github.com/Carlonii',
                                     }}
                                 />
                             ))}

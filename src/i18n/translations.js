@@ -3,7 +3,7 @@ export const translations = {
         // Navbar
         nav: {
             home: 'Home',
-            backend: 'Backend',
+            backend: 'Projetos',
             ai: 'IA',
             blog: 'Blog',
             contact: 'Contato',
@@ -131,17 +131,16 @@ export const translations = {
             tagline: 'Transformando ideias em soluções digitais de alta performance.',
             navTitle: 'Navegação',
             contactTitle: 'Contato',
-            backendProjects: 'Projetos Backend',
+            backendProjects: 'Projetos',
             aiProjects: 'Projetos IA',
-            madeWith: 'Feito com',
-            andCode: 'e muito código.',
+
         },
 
         // Backend Page
         backendPage: {
             badge: 'Backend & Full Stack',
-            title: 'Projetos',
-            titleHighlight: 'Backend',
+            title: '',
+            titleHighlight: 'Projetos',
             subtitle: 'APIs robustas, microsserviços escaláveis e soluções enterprise construídas com as melhores práticas da indústria.',
             techLabel: 'Tech Stack',
             techTitle: 'Ferramentas do Backend',
@@ -277,7 +276,7 @@ export const translations = {
     en: {
         nav: {
             home: 'Home',
-            backend: 'Backend',
+            backend: 'Projects',
             ai: 'AI',
             blog: 'Blog',
             contact: 'Contact',
@@ -398,16 +397,15 @@ export const translations = {
             tagline: 'Transforming ideas into high-performance digital solutions.',
             navTitle: 'Navigation',
             contactTitle: 'Contact',
-            backendProjects: 'Backend Projects',
+            backendProjects: 'Projects',
             aiProjects: 'AI Projects',
-            madeWith: 'Made with',
-            andCode: 'and lots of code.',
+
         },
 
         backendPage: {
             badge: 'Backend & Full Stack',
             title: '',
-            titleHighlight: 'Backend Projects',
+            titleHighlight: 'Projects',
             subtitle: 'Robust APIs, scalable microservices, and enterprise solutions built with industry best practices.',
             techLabel: 'Tech Stack',
             techTitle: 'Backend Tools',

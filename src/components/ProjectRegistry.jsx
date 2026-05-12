@@ -67,7 +67,7 @@ export default function ProjectRegistry({
                                     <span className="registry-status-text">STATUS: {project.status}</span>
                                 </div>
                                 <a
-                                    href={project.link || "https://github.com/filipe-carloni"}
+                                    href={project.link || "https://github.com/Carlonii"}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="registry-card__link"

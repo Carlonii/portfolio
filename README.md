@@ -53,7 +53,7 @@ Para rodar este projeto localmente, siga os passos abaixo:
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/filipe-carloni/portifolio.git
+   git clone https://github.com/Carlonii/portifolio.git
    ```
 
 2. **Instale as dependências:**
@@ -69,9 +69,9 @@ Para rodar este projeto localmente, siga os passos abaixo:
 ## 📬 Contato
 
 - **E-mail:** [dipradofilipe@gmail.com](mailto:dipradofilipe@gmail.com)
-- **LinkedIn:** [linkedin.com/in/filipe-carloni](https://linkedin.com/in/filipe-carloni)
-- **GitHub:** [github.com/filipe-carloni](https://github.com/filipe-carloni)
+- **LinkedIn:** [linkedin.com/in/filipe-carloni](https://www.linkedin.com/in/filipe-carloni-dev/)
+- **GitHub:** [github.com/filipe-carloni](https://github.com/Carlonii)
 - **Telefone:** +55 (62) 99991-2499
 
 ---
-Feito com ❤️ por Filipe Carloni.
+Filipe Carloni.

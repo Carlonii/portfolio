@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useLanguage } from '../i18n/LanguageContext';
-import { Mail, Phone, Linkedin, Github, Send, CheckCircle, Clock, MapPin } from 'lucide-react';
+import { Mail, Phone, Linkedin, Github, Send, CheckCircle, Clock, MapPin, MessageCircle } from 'lucide-react';
 import SectionTitle from '../components/SectionTitle';
 import PageTransition from '../components/PageTransition';
 import './Contact.css';
@@ -129,21 +129,21 @@ export default function Contact() {
                                             <p>dipradofilipe@gmail.com</p>
                                         </div>
                                     </a>
-                                    <a href="tel:+5562999912499" className="info-card glass">
-                                        <Phone size={20} className="info-card-icon" />
+                                    <a href="https://wa.me/5562999912499?text=Olá%20Filipe,%20vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20sobre%20um%20projeto." target="_blank" rel="noopener noreferrer" className="info-card glass">
+                                        <MessageCircle size={20} className="info-card-icon" />
                                         <div>
                                             <h4>WhatsApp</h4>
                                             <p>+55 (62) 99991-2499</p>
                                         </div>
                                     </a>
-                                    <a href="https://linkedin.com/in/filipe-carloni" target="_blank" rel="noopener noreferrer" className="info-card glass">
+                                    <a href="https://www.linkedin.com/in/filipe-carloni-dev/" target="_blank" rel="noopener noreferrer" className="info-card glass">
                                         <Linkedin size={20} className="info-card-icon" />
                                         <div>
                                             <h4>LinkedIn</h4>
                                             <p>/in/filipe-carloni</p>
                                         </div>
                                     </a>
-                                    <a href="https://github.com/filipe-carloni" target="_blank" rel="noopener noreferrer" className="info-card glass">
+                                    <a href="https://github.com/Carlonii" target="_blank" rel="noopener noreferrer" className="info-card glass">
                                         <Github size={20} className="info-card-icon" />
                                         <div>
                                             <h4>GitHub</h4>
