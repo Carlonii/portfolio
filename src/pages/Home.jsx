@@ -171,7 +171,7 @@ export default function Home() {
                                     <Link to="/backend" className="btn btn-outline">
                                         {t('hero.viewProjects')} <ArrowRight size={18} />
                                     </Link>
-                                    <a href="/cv-filipe-carloni.pdf" download className="btn btn-outline">
+                                    <a href="cv-filipe-carloni.pdf" download className="btn btn-outline">
                                         <Download size={18} /> {t('hero.downloadCV')}
                                     </a>
                                 </div>

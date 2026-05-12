@@ -1,4 +1,5 @@
 import { Github, Linkedin, Mail, Phone, MessageCircle } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../i18n/LanguageContext';
 import './Footer.css';
 
@@ -10,21 +11,21 @@ export default function Footer() {
             <div className="footer-container container">
                 <div className="footer-top">
                     <div className="footer-brand">
-                        <a href="/" className="footer-logo">
+                        <Link to="/" className="footer-logo">
                             <span className="logo-bracket">&lt;</span>
                             <span className="logo-text">FC</span>
                             <span className="logo-bracket">/&gt;</span>
-                        </a>
+                        </Link>
                         <p className="footer-tagline">{t('footer.tagline')}</p>
                     </div>
 
                     <div className="footer-links-group">
                         <h4>{t('footer.navTitle')}</h4>
-                        <a href="/">{t('nav.home')}</a>
-                        <a href="/backend">{t('footer.backendProjects')}</a>
-                        <a href="/ai">{t('footer.aiProjects')}</a>
-                        <a href="/blog">{t('nav.blog')}</a>
-                        <a href="/contact">{t('nav.contact')}</a>
+                        <Link to="/">{t('nav.home')}</Link>
+                        <Link to="/backend">{t('footer.backendProjects')}</Link>
+                        <Link to="/ai">{t('footer.aiProjects')}</Link>
+                        <Link to="/blog">{t('nav.blog')}</Link>
+                        <Link to="/contact">{t('nav.contact')}</Link>
                     </div>
 
                     <div className="footer-links-group">
